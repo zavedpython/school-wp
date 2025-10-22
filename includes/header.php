@@ -67,9 +67,31 @@ if (file_exists($logo_file)) {
         .nav-links a { color: #333; text-decoration: none; font-weight: 500; padding: 10px 0; }
         .nav-links a:hover { color: #1e3a8a; }
         .dropdown { position: relative; }
-        .dropdown-content { display: none; position: absolute; background: white; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); top: 100%; }
+        .dropdown-content { display: none; position: absolute; background: white; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); top: 100%; z-index: 1000; }
         .dropdown-content a { padding: 12px 16px; display: block; border-bottom: 1px solid #eee; }
         .dropdown:hover .dropdown-content { display: block; }
+        
+        /* Hamburger Menu */
+        .hamburger { display: none; flex-direction: column; cursor: pointer; padding: 10px; }
+        .hamburger span { width: 25px; height: 3px; background: #333; margin: 3px 0; transition: 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+        
+        /* Mobile Menu */
+        .mobile-menu { display: none; position: fixed; top: 120px; left: 0; width: 100%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 999; }
+        .mobile-menu.active { display: block; }
+        .mobile-menu ul { list-style: none; padding: 0; margin: 0; }
+        .mobile-menu li { border-bottom: 1px solid #eee; }
+        .mobile-menu a { display: block; padding: 15px 20px; color: #333; text-decoration: none; }
+        .mobile-menu a:hover { background: #f8fafc; color: #1e3a8a; }
+        .mobile-dropdown { background: #f8fafc; }
+        .mobile-dropdown a { padding-left: 40px; font-size: 0.9rem; }
+        
+        @media (max-width: 1024px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+        }
         
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
@@ -124,10 +146,65 @@ if (file_exists($logo_file)) {
                             <li><a href="circulars.php">Circulars</a></li>
                             <li><a href="contact.php">Contact</a></li>
                         </ul>
+                        
+                        <!-- Hamburger Menu -->
+                        <div class="hamburger" onclick="toggleMobileMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
     
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#" onclick="toggleDropdown(event)">About Us ▼</a>
+                <div class="mobile-dropdown" style="display: none;">
+                    <a href="school-history.php">School History</a>
+                    <a href="vision-mission.php">Vision & Mission</a>
+                    <a href="principal-message.php">Principal's Message</a>
+                </div>
+            </li>
+            <li><a href="admission.php">Admission</a></li>
+            <li><a href="faculty.php">Faculty</a></li>
+            <li><a href="fee-structure.php">Fee Structure</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
+            <li><a href="notices.php">Notices</a></li>
+            <li><a href="circulars.php">Circulars</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </div>
+    
     <div class="main-content">
+    
+    <script>
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = event.target.nextElementSibling;
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
