@@ -1,0 +1,28 @@
+{
+    "about_text": "Dedicated to providing quality education and nurturing young minds for a brighter future.",
+    "quick_links": {
+        "Admission Process": "admission.php",
+        "Fee Structure": "fee-structure.php",
+        "Gallery": "gallery.php",
+        "Contact Us": "#contact"
+    },
+    "contact_info": {
+        "address": "Khekra Baghpat UP-201102\r\n",
+        "phone": "+91-11-12345678",
+        "email": "info@balbarti.edu",
+        "website": "www.balbarti.edu"
+    },
+    "social_links": {
+        "facebook": "https:\/\/facebook.com\/balbarti",
+        "twitter": "https:\/\/twitter.com\/balbarti",
+        "instagram": "https:\/\/instagram.com\/balbarti",
+        "youtube": "https:\/\/youtube.com\/balbarti"
+    },
+    "copyright_text": "All rights reserved.",
+    "show_map": true,
+    "map_config": {
+        "embed_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3501.674870949309!2d77.20902731508236!3d28.65195908240251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683329da9%3A0x1b2b3f6a5c6d7e8f!2sBal%20Bharti%20Public%20School%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin",
+        "directions_url": "https:\/\/maps.google.com\/?q=Bal+Bharti+Public+School+New+Delhi",
+        "height": "350"
+    }
+}

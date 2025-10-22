@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "category": "independence-day",
+        "image_path": "uploads\/gallery\/independence-day_1760896193.jpeg",
+        "caption": "a",
+        "created_at": "2025-10-19 17:49:53"
+    },
+    {
+        "id": 2,
+        "category": "independence-day",
+        "image_path": "uploads\/gallery\/independence-day_1760896415.jpg",
+        "caption": "11",
+        "created_at": "2025-10-19 17:53:35"
+    },
+    {
+        "id": 3,
+        "category": "independence-day",
+        "image_path": "uploads\/gallery\/independence-day_1760896934.jpg",
+        "caption": "11",
+        "created_at": "2025-10-19 18:02:14"
+    }
+]

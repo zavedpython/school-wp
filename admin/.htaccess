@@ -1,0 +1,16 @@
+# Admin directory access
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Redirect /admin/login to /admin/login.php
+RewriteRule ^login$ login.php [L]
+RewriteRule ^dashboard$ dashboard.php [L]
+RewriteRule ^logout$ logout.php [L]
+# Allow direct access to other PHP files
+RewriteRule ^(.*)$ $1 [L]
+</IfModule>
+
+# Security
+<Files "*.json">
+    Order allow,deny
+    Deny from all
+</Files>

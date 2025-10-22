@@ -1,0 +1,81 @@
+    <footer style="background: #374151; color: white;">
+        <!-- Main Footer Content -->
+        <div style="padding: 3rem 0;">
+            <div class="container">
+                <div class="grid">
+                    <!-- School Info -->
+                    <div class="card" style="background: transparent; box-shadow: none; color: white;">
+                        <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;"><?php echo htmlspecialchars($settings['school_name']); ?></h4>
+                        <p style="color: #d1d5db; margin-bottom: 1rem;">
+                            <?php echo htmlspecialchars($footer_data['about_text']); ?>
+                        </p>
+                        <div style="display: flex; gap: 1rem;">
+                            <?php if (!empty($footer_data['social_links']['facebook'])): ?>
+                                <a href="<?php echo $footer_data['social_links']['facebook']; ?>" target="_blank" style="color: #d1d5db; text-decoration: none;">📘 Facebook</a>
+                            <?php endif; ?>
+                            <?php if (!empty($footer_data['social_links']['instagram'])): ?>
+                                <a href="<?php echo $footer_data['social_links']['instagram']; ?>" target="_blank" style="color: #d1d5db; text-decoration: none;">📷 Instagram</a>
+                            <?php endif; ?>
+                            <?php if (!empty($footer_data['social_links']['twitter'])): ?>
+                                <a href="<?php echo $footer_data['social_links']['twitter']; ?>" target="_blank" style="color: #d1d5db; text-decoration: none;">🐦 Twitter</a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="card" style="background: transparent; box-shadow: none; color: white;">
+                        <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">Quick Links</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <?php foreach ($footer_data['quick_links'] as $name => $url): ?>
+                                <li style="margin-bottom: 0.5rem;"><a href="<?php echo $url; ?>" style="color: #d1d5db; text-decoration: none;"><?php echo htmlspecialchars($name); ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="card" style="background: transparent; box-shadow: none; color: white;">
+                        <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">Contact Info</h4>
+                        <div style="color: #d1d5db;">
+                            <p style="margin-bottom: 0.5rem;">📍 <?php echo htmlspecialchars($footer_data['contact_info']['address']); ?></p>
+                            <p style="margin-bottom: 0.5rem;">📞 <?php echo htmlspecialchars($footer_data['contact_info']['phone']); ?></p>
+                            <p style="margin-bottom: 0.5rem;">✉️ <?php echo htmlspecialchars($footer_data['contact_info']['email']); ?></p>
+                            <?php if (!empty($footer_data['contact_info']['website'])): ?>
+                                <p style="margin-bottom: 0.5rem;">🌐 <?php echo htmlspecialchars($footer_data['contact_info']['website']); ?></p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <?php if ($footer_data['show_map']): ?>
+                    <div class="card" style="background: transparent; box-shadow: none; color: white;">
+                        <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">📍 Our Location</h4>
+                        <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+                            <iframe
+                                src="<?php echo $footer_data['map_config']['embed_url']; ?>"
+                                width="100%"
+                                height="200"
+                                style="border: 0; display: block;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="<?php echo htmlspecialchars($settings['school_name']); ?> Location">
+                            </iframe>
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="<?php echo $footer_data['map_config']['directions_url']; ?>" target="_blank" 
+                               style="display: inline-block; background: #3498db; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">
+                                🧭 Get Directions
+                            </a>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div style="background: #1f2937; padding: 1rem 0;">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                    <p style="color: #9ca3af; font-size: 0.875rem;">
+                        © 2024 <?php echo htmlspecialchars($settings['school_name']); ?>. <?php echo htmlspecialchars($footer_data['copyright_text']); ?>

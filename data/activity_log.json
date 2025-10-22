@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "user": "admin",
+        "action": "Login Success",
+        "details": "User logged in successfully",
+        "ip_address": "127.0.0.1",
+        "timestamp": "2025-10-19 18:22:28"
+    },
+    {
+        "id": 2,
+        "user": "admin",
+        "action": "Login Success",
+        "details": "User logged in successfully",
+        "ip_address": "127.0.0.1",
+        "timestamp": "2025-10-19 18:22:43"
+    },
+    {
+        "id": 3,
+        "user": "admin",
+        "action": "Login Success",
+        "details": "User logged in successfully",
+        "ip_address": "172.23.0.1",
+        "timestamp": "2025-10-21 14:50:14"
+    },
+    {
+        "id": 4,
+        "user": "admin",
+        "action": "Login Success",
+        "details": "User logged in successfully",
+        "ip_address": "172.23.0.1",
+        "timestamp": "2025-10-22 06:26:13"
+    },
+    {
+        "id": 5,
+        "user": "admin",
+        "action": "Login Failed",
+        "details": "Failed login attempt for username: admin",
+        "ip_address": "172.23.0.1",
+        "timestamp": "2025-10-22 06:27:15"
+    },
+    {
+        "id": 6,
+        "user": "admin",
+        "action": "Login Success",
+        "details": "User logged in successfully",
+        "ip_address": "172.23.0.1",
+        "timestamp": "2025-10-22 06:27:23"
+    },
+    {
+        "id": 7,
+        "user": "admin",
+        "action": "Login Success",
+        "details": "User logged in successfully",
+        "ip_address": "172.23.0.1",
+        "timestamp": "2025-10-22 06:39:15"
+    }
+]

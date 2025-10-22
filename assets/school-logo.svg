@@ -1,0 +1,33 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="40" cy="40" r="38" fill="#1e3a8a" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- School Building -->
+  <rect x="20" y="35" width="40" height="25" fill="#ffffff"/>
+  <rect x="22" y="37" width="36" height="21" fill="#e5e7eb"/>
+  
+  <!-- Roof -->
+  <polygon points="15,35 40,20 65,35" fill="#dc2626"/>
+  
+  <!-- Flag Pole -->
+  <rect x="39" y="15" width="2" height="10" fill="#374151"/>
+  <rect x="41" y="15" width="8" height="5" fill="#f59e0b"/>
+  
+  <!-- Windows -->
+  <rect x="25" y="40" width="6" height="6" fill="#3b82f6"/>
+  <rect x="33" y="40" width="6" height="6" fill="#3b82f6"/>
+  <rect x="41" y="40" width="6" height="6" fill="#3b82f6"/>
+  <rect x="49" y="40" width="6" height="6" fill="#3b82f6"/>
+  
+  <!-- Door -->
+  <rect x="36" y="48" width="8" height="12" fill="#8b5cf6"/>
+  <circle cx="42" cy="54" r="1" fill="#fbbf24"/>
+  
+  <!-- Book Symbol -->
+  <rect x="28" y="25" width="24" height="3" fill="#ffffff" rx="1"/>
+  <rect x="30" y="28" width="20" height="2" fill="#f59e0b" rx="1"/>
+  
+  <!-- Stars for Excellence -->
+  <polygon points="12,15 13,18 16,18 14,20 15,23 12,21 9,23 10,20 8,18 11,18" fill="#fbbf24"/>
+  <polygon points="68,15 69,18 72,18 70,20 71,23 68,21 65,23 66,20 64,18 67,18" fill="#fbbf24"/>
+</svg>

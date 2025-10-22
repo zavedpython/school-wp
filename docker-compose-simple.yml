@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  wordpress:
+    image: wordpress:php8.1-apache
+    container_name: school_wordpress_simple
+    ports:
+      - "3232:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_NAME: school_website
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: rootpassword
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: school_mysql_simple
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: school_website
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./setup_database.sql:/docker-entrypoint-initdb.d/setup_database.sql
+    ports:
+      - "3307:3306"
+
+volumes:
+  mysql_data:

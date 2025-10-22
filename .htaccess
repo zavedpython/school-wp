@@ -1,0 +1,23 @@
+RewriteEngine On
+
+# Admin panel routing
+RewriteRule ^admin/login$ admin/login.php [L]
+RewriteRule ^admin/dashboard$ admin/dashboard.php [L]
+RewriteRule ^admin/logout$ admin/logout.php [L]
+RewriteRule ^admin/?$ admin/login.php [L]
+
+# General PHP file routing (remove .php extension)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+# Security headers
+<Files "*.json">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order allow,deny
+    Deny from all
+</Files>
