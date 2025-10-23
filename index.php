@@ -84,7 +84,7 @@ if (file_exists($notices_file)) {
         .logo-text h1 { color: #1e3a8a; font-size: 24px; margin: 0; }
         .logo-text p { color: #666; font-size: 14px; margin: 0; }
         
-        .nav-links { display: flex; list-style: none; gap: 30px; margin-right: 0; }
+        .nav-links { display: flex; list-style: none; gap: 20px; margin-right: 0; flex-wrap: wrap; }
         .nav-links a { color: #333; text-decoration: none; font-weight: 500; padding: 10px 0; }
         .nav-links a:hover { color: #1e3a8a; }
         .dropdown { position: relative; }
@@ -196,6 +196,9 @@ if (file_exists($notices_file)) {
         .footer-bottom a:hover { color: #f59e0b; }
         
         /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-links { gap: 15px; font-size: 0.9rem; }
+        }
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.5rem; }
@@ -248,7 +251,9 @@ if (file_exists($notices_file)) {
                             <li><a href="admission.php">Admission</a></li>
                             <li><a href="faculty.php">Faculty</a></li>
                             <li><a href="gallery.php">Gallery</a></li>
+                            <li><a href="fee-structure.php">Fee Structure</a></li>
                             <li><a href="notices.php">Notices</a></li>
+                            <li><a href="circulars.php">Circulars</a></li>
                             <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </nav>
@@ -309,11 +314,11 @@ if (file_exists($notices_file)) {
                         <p>Meet our experienced and dedicated teaching staff.</p>
                     </div>
                 </a>
-                <a href="gallery.php" style="text-decoration: none; color: inherit;">
+                <a href="contact.php" style="text-decoration: none; color: inherit;">
                     <div class="quick-card">
-                        <div class="icon">🏆</div>
-                        <h3>Gallery</h3>
-                        <p>View our school events, activities and achievements.</p>
+                        <div class="icon">📞</div>
+                        <h3>Contact Us</h3>
+                        <p>Get in touch with us for any queries or information.</p>
                     </div>
                 </a>
             </div>
